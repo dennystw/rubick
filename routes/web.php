@@ -11,10 +11,6 @@
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
-});*/
-
 Route::get('/', 'CrudController@index');
 Route::get('/add', 'CrudController@create');
 Route::post('/store', 'CrudController@store');
@@ -26,3 +22,6 @@ Route::get('/delete/{id}', 'CrudController@destroy');
 Route::get('/query', 'CariController@search');
 
 Route::resource('todolist', 'TodoController');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
