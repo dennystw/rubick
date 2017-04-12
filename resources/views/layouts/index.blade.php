@@ -14,8 +14,25 @@
 		@show
 
 		<div class="container">
-			@yield('content')
+			<div class="row">
+				<div class="col s9">
+					@yield('content')
+				</div>
+
+				<!--
+				<div class="col s3">
+					@section('sidebar')
+						@include('layouts.sidebar')
+					@show
+				</div>
+				-->
+			</div>
 		</div>
+
+		@section('footer')
+			@include('layouts.footer')
+		@show
+
 
 		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="{{asset('js/materialize.min.js')}}"></script>
@@ -26,6 +43,12 @@
 			});
 		})(jQuery); // end of jQuery name space
 		</script>
+		
+		<script type="text/javascript">
+			$(document).ready(function() {
+	        $('select').material_select();
+    	});
+    	</script>
 
 		<script type="text/javascript" src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
 		<script type="text/javascript">

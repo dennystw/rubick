@@ -2,33 +2,26 @@
 @section('content')
 
 <div class="section">
-	<div class="card-panel purple darken-3 white-text">Rubick CRUD Laravel 5.2 dengan Materialize CSS</div>
+    <h5>Latest post</h5>
 </div>
 
 <div class="section">
-    <form action="{{ url('query') }}" method="GET">
-        <div class="row">
-            <div class="input-field col s12">
-                <input type="text" class="validate" name="q">
-                <label for="title">Cari</label>
-            </div>
-            <button type="submit" class="btn btn-flat pink accent-3 waves-effect waves-light white-text right">Cari <i class="material-icons right">search</i></button>
-        </div>
-    </form>
-
 
 	@foreach($datas as $data)
 
     <div class="row">
-        <div class="col s12">
+        <div class="col s10 card-panel hoverable">
             <h5>{{ $data->judul }}</h5>
 
             <div class="divider"></div>
             <p>{!!substr($data->isi,0,200)!!}...</p>
 
-            <a href="{{ url('read', $data->id) }}" class="btn btn-flat pink accent-3 waves-effect waves-light white-text">Readmore <i class="material-icons right">send</i></a>
+            <a href="{{ url('read', $data->id) }}" class="btn btn-flat pink accent-3 waves-effect waves-light white-text right">Readmore <i class="material-icons right">send</i></a>
+
+            <!-- Disable dulu fungsinya
             <a href="{{ url('edit', $data->id) }}" class="btn btn-flat purple darken-4 waves-effect waves-light white-text">Edit <i class="material-icons right">mode_edit</i></a>
             <a href="{{ url('delete', $data->id) }}" onclick="return confirm('Yakin mau hapus data ini bro?')" class="btn btn-flat red darken-4 waves-effect waves-light white-text">Delete <i class="material-icons right">delete</i></a>
+            -->
         </div>
     </div>
 

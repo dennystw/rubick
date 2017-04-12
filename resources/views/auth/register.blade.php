@@ -52,6 +52,17 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('level') ? 'has-error' : '' }}">
+                            <label for="level" class="col-md-4 control-label">Level</label>
+
+                            <div class="col-md-6">
+                                <select id="level" type="text" class="form-control" name="level" required>
+                                    <option value="1">Admin</option>
+                                    <option value="2">Member</option>
+                                </select>
+                            </div>
+                        </div>
+
                         <div class="form-group">
                             <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
 

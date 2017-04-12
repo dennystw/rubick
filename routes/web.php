@@ -21,7 +21,5 @@ Route::get('/delete/{id}', 'CrudController@destroy');
 
 Route::get('/query', 'CariController@search');
 
-Route::resource('todolist', 'TodoController');
-Auth::routes();
-
-Route::get('/home', 'HomeController@index');
+Route::get('/regis', 'AuthController@create');
+Route::post('/adduser', 'AuthController@store');
