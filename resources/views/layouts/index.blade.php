@@ -19,13 +19,12 @@
 					@yield('content')
 				</div>
 
-				<!--
 				<div class="col s3">
 					@section('sidebar')
 						@include('layouts.sidebar')
 					@show
 				</div>
-				-->
+				
 			</div>
 		</div>
 
@@ -49,7 +48,16 @@
 	        $('select').material_select();
     	});
     	</script>
+    	<script type="text/javascript">
+    		$('.carousel.carousel-slider').carousel({fullWidth: true});	    		
+    	</script>
 
+    	<script type="text/javascript">
+    		$(document).ready(function(){
+      		$('.slider').slider();
+    		});
+    	</script>
+    	
 		<script type="text/javascript" src="{{ asset('js/tinymce/tinymce.min.js') }}"></script>
 		<script type="text/javascript">
 			tinymce.init({

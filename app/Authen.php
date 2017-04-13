@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Auth extends Model
+class Authen extends Model
 {
 	protected $table = 'users';
     protected $primaryKey = 'id_user';

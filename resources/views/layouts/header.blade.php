@@ -7,25 +7,28 @@
 				@if (Auth::guest())
 					<li><a href="{{ url('/login') }}">Login</li>
 				@else
-						<li>
-						<!-- Dropdown Trigger -->
-						  <a class='dropdown-button' href='#' data-activates='dropdown1'>{{ Auth::user()->name }}</a>
+					<!--<li>
+					<!-- Dropdown Trigger-->
+					  <a class='dropdown-button' href='#' data-activates='dropdown1'>{{ Auth::user()->name }}</a>
 
-						 <!-- Dropdown Structure -->
-						  <ul id='dropdown1' class='dropdown-content'>
-						    <li>
-						    	<a href="{{ route('logout') }}"
-	                                onclick="event.preventDefault();
-	                                         document.getElementById('logout-form').submit();">
-	                                Logout
-	                            </a>
+					 <!-- Dropdown Structure-->
+					  <ul id='dropdown1' class='dropdown-content'>
+					  	<li>
+					  		<a href="#!" disabled>Settings</a>
+					  	</li>
+					    <li>
+					    	<a href="{{ route('logout') }}"
+                                onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
 
-	                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-	                                {{ csrf_field() }}
-	                            </form>
-						    </li>
-						  </ul>
-						</li>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+					    </li>
+					  </ul>
+					</li>
 				@endif
 			</ul>
 

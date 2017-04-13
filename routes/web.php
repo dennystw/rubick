@@ -23,3 +23,6 @@ Route::get('/query', 'CariController@search');
 
 Route::get('/regis', 'AuthController@create');
 Route::post('/adduser', 'AuthController@store');
+
+Auth::routes();
+Route::get('/home', 'HomeController@index');

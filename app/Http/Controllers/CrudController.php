@@ -9,7 +9,7 @@ class CrudController extends Controller
 {
     public function index()
     {
-        $datas = Crud::orderBy('id', 'DESC')->paginate(3);
+        $datas = Crud::orderBy('id', 'DESC')->paginate(5);
         return View('show')->with('datas', $datas);
     }
 

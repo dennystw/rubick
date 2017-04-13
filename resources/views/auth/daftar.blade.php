@@ -6,7 +6,7 @@
 </div>
 
 <div class="section">
-  <form action="{{ url('adduser') }}" method="POST">
+  <form action="{{ route('register') }}" method="POST">
   {!! csrf_field() !!}
     <div class="row">
           <div class="input-field col s6">

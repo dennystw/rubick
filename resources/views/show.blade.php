@@ -2,6 +2,51 @@
 @section('content')
 
 <div class="section">
+    <div class="row">
+        <div class="slider col s11">
+            <ul class="slides">
+              <li>
+                <img src="http://lorempixel.com/800/400/food/3"> <!-- random image -->
+                <div class="caption center-align">
+                  <h3>This is our big Tagline!</h3>
+                  <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div>
+              </li>
+              <li>
+                <img src="{{ asset('/images/stand.jpg') }}"> <!-- random image -->
+                <div class="caption left-align">
+                  <h3>Left Aligned Caption</h3>
+                  <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div>
+              </li>
+              <li>
+                <img src="https://farm1.staticflickr.com/713/32530514683_97ca99d21d_b.jpg"> <!-- random image -->
+                <div class="caption right-align">
+                  <h3>Right Aligned Caption</h3>
+                  <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div>
+              </li>
+              <li>
+                <img src="http://lorempixel.com/580/250/nature/4"> <!-- random image -->
+                <div class="caption center-align">
+                  <h3>This is our big Tagline!</h3>
+                  <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+                </div>
+              </li>
+            </ul>
+        </div>
+
+        <!--
+        <div class="carousel carousel-slider col s11">
+            <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/800/400/food/3"></a>
+            <a class="carousel-item" href="#other"><img src="{{ asset('/images/stand.jpg') }}"></a>
+            <a class="carousel-item" href="#two!"><img src="https://farm1.staticflickr.com/713/32530514683_97ca99d21d_b.jpg"></a>          
+        </div>
+        -->
+    </div>
+</div>
+
+<div class="section">
     <h5>Latest post</h5>
 </div>
 
@@ -10,7 +55,7 @@
 	@foreach($datas as $data)
 
     <div class="row">
-        <div class="col s10 card-panel hoverable">
+        <div class="col s11 card-panel hoverable">
             <h5>{{ $data->judul }}</h5>
 
             <div class="divider"></div>

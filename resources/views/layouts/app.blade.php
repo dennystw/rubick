@@ -8,14 +8,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'ADMIN PANEL') }}</title>
+    <title>{{ config('app.name', 'Rubick') }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Scripts -->
     <script>
-        window.Laravel = {!! json_encode([
+        window.Rubick = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
     </script>
@@ -36,7 +36,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        {{ config('app.name', 'Rubick') }}
                     </a>
                 </div>
 
